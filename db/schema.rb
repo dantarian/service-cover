@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_214859) do
+ActiveRecord::Schema.define(version: 2020_11_02_223200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,13 +28,8 @@ ActiveRecord::Schema.define(version: 2020_11_02_214859) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "presences", force: :cascade do |t|
-    t.integer "engineer_id"
-    t.integer "working_date_id"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+# Could not dump table "presences" because of following StandardError
+#   Unknown type 'presence_status' for column 'status'
 
   create_table "services", force: :cascade do |t|
     t.string "name"
@@ -42,11 +37,8 @@ ActiveRecord::Schema.define(version: 2020_11_02_214859) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "working_dates", force: :cascade do |t|
-    t.date "working_date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+# Could not dump table "working_dates" because of following StandardError
+#   Unknown type 'date_type' for column 'day_type'
 
   add_foreign_key "assignments", "engineers"
   add_foreign_key "assignments", "services"
