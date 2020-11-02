@@ -1,0 +1,2 @@
+class WorkingDate < ApplicationRecord
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  engineer_id: 1
+  working_date: 2020-11-02
+  status: MyString
+
+two:
+  engineer_id: 1
+  working_date: 2020-11-02
+  status: MyString

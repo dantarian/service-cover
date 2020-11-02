@@ -1,0 +1,22 @@
+<%= form_with(model: working_date, local: true) do |form| %>
+  <% if working_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(working_date.errors.count, "error") %> prohibited this working_date from being saved:</h2>
+
+      <ul>
+        <% working_date.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :working_date %>
+    <%= form.date_select :working_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
