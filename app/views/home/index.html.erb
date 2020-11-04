@@ -1,0 +1,32 @@
+<h1>Service Coverage</h1>
+
+<table class="coverage">
+    <thead>
+        <tr>
+            <th class="service">Service</th>
+            <% @working_dates.each do |working_date| %>
+                <th colspan="2" class="date <%=working_date.day_type%>">
+                    <p class="dayname"><%=working_date.working_date.strftime("%a")%></p>
+                    <p class="daynumber"><%=working_date.working_date.strftime("%-d") %></p>
+                    <p class="monthname"><%=working_date.working_date.strftime("%b") %></p>
+                </th>
+            <% end %>
+        </tr>
+    </thead>
+    <tbody>
+        <% @services.each do |service| %>
+            <tr>
+                <td class="service"><%=service.name%></td>
+                <% @working_dates.each do |working_date| %>
+                    <% status = service.status(working_date) %>
+                    <td class="working <%=working_date.day_type%> <%=status%>">
+                        <%= service.working_engineers_initials(working_date) %>
+                    </td>
+                    <td class="maybe <%=working_date.day_type%> <%=status%>">
+                        <%= service.maybe_engineers_initials(working_date) %>
+                    </td>
+                <% end %>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

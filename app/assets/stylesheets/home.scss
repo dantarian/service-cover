@@ -1,0 +1,82 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.coverage {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    th, td {
+        border: 1px solid black;
+    }
+
+    .service {
+        padding: 1em;
+        column-width: 8em;
+        max-width: 8em;
+    }
+
+    th.date {
+        padding: 1em;
+    }
+
+    td.working, td.maybe {
+        column-width: 4em;
+        max-width: 4em;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    th p {
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .daynumber {
+        font-size: 1.4em;
+    }
+
+    .weekend, .holiday {
+        background-color: lightgrey;
+    }
+
+    .weekday.date {
+        background-color: lightblue;
+    }
+
+    .special.date {
+        background-color: lemonchiffon;
+    }
+
+    .ok.working {
+        background-color: #8f8;
+    }
+
+    .ok.maybe {
+        background-color: #afa;
+    }
+
+    .borderline.working {
+        background-color: #ff8;
+    }
+
+    .borderline.maybe {
+        background-color: #ffa;
+    }
+
+    .fixable.working {
+        background-color: rgb(252, 197, 160);
+    }
+
+    .fixable.maybe {
+        background-color: #ffa;
+    }
+
+    .notok.working {
+        background-color: rgb(255, 136, 136);
+    }
+
+    .notok.maybe {
+        background-color: rgb(255, 170, 170);
+    }
+}

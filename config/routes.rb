@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "home#index"
   resources :working_dates
   resources :presences
   resources :assignments
