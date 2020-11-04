@@ -2,12 +2,12 @@
 
 <p>
   <strong>Engineer:</strong>
-  <%= @assignment.engineer_id %>
+  <%= @assignment.engineer.name %>
 </p>
 
 <p>
   <strong>Service:</strong>
-  <%= @assignment.service_id %>
+  <%= @assignment.service.name %>
 </p>
 
 <%= link_to 'Edit', edit_assignment_path(@assignment) %> |

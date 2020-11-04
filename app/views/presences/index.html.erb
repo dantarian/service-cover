@@ -15,8 +15,8 @@
   <tbody>
     <% @presences.each do |presence| %>
       <tr>
-        <td><%= presence.engineer_id %></td>
-        <td><%= presence.working_date %></td>
+        <td><%= presence.engineer.name %></td>
+        <td><%= presence.working_date.working_date %></td>
         <td><%= presence.status %></td>
         <td><%= link_to 'Show', presence %></td>
         <td><%= link_to 'Edit', edit_presence_path(presence) %></td>

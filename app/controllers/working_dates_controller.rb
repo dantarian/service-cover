@@ -69,6 +69,6 @@ class WorkingDatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def working_date_params
-      params.require(:working_date).permit(:working_date)
+      params.require(:working_date).permit(:working_date, :day_type)
     end
 end

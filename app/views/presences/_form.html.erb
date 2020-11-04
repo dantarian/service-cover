@@ -13,17 +13,19 @@
 
   <div class="field">
     <%= form.label :engineer_id %>
-    <%= form.number_field :engineer_id %>
+    <%= form.collection_select :engineer_id, Engineer.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= form.label :working_date %>
-    <%= form.date_select :working_date %>
+    <%= form.label :working_date_id %>
+    <%= form.collection_select :working_date_id, WorkingDate.all, :id, :working_date %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.select :status do %>
+      <%= options_for_select(Presence.statuses.map { |k,v| [v,k] }) %>
+    <% end %>
   </div>
 
   <div class="actions">

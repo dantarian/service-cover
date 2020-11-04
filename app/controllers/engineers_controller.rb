@@ -28,7 +28,7 @@ class EngineersController < ApplicationController
 
     respond_to do |format|
       if @engineer.save
-        format.html { redirect_to @engineer, notice: 'Engineer was successfully created.' }
+        format.html { redirect_to engineers_url, notice: 'Engineer was successfully created.' }
         format.json { render :show, status: :created, location: @engineer }
       else
         format.html { render :new }

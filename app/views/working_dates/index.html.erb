@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Working date</th>
+      <th>Day type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @working_dates.each do |working_date| %>
       <tr>
         <td><%= working_date.working_date %></td>
+        <td><%= working_date.day_type %></td>
         <td><%= link_to 'Show', working_date %></td>
         <td><%= link_to 'Edit', edit_working_date_path(working_date) %></td>
         <td><%= link_to 'Destroy', working_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>

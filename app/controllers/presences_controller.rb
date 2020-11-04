@@ -28,7 +28,7 @@ class PresencesController < ApplicationController
 
     respond_to do |format|
       if @presence.save
-        format.html { redirect_to @presence, notice: 'Presence was successfully created.' }
+        format.html { redirect_to presences_url, notice: 'Presence was successfully created.' }
         format.json { render :show, status: :created, location: @presence }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class PresencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def presence_params
-      params.require(:presence).permit(:engineer_id, :working_date, :status)
+      params.require(:presence).permit(:engineer_id, :working_date_id, :status)
     end
 end

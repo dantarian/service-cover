@@ -16,6 +16,13 @@
     <%= form.date_select :working_date %>
   </div>
 
+  <div class="field">
+    <%= form.label :day_type %>
+    <%= form.select :day_type do %>
+      <%= options_for_select(WorkingDate.date_types.map { |k,v| [v,k] }) %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

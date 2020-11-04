@@ -14,8 +14,8 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
-        <td><%= assignment.engineer_id %></td>
-        <td><%= assignment.service_id %></td>
+        <td><%= assignment.engineer.name %></td>
+        <td><%= assignment.service.name %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
